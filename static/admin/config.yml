@@ -1,0 +1,30 @@
+backend:
+  name: gitea
+  repo: SMagic/blog # Path to your Gitea repository
+  app_id: e623c862-2207-4b5d-8723-e46438b5f762 # The Client ID provided by Gitea
+  api_root: https://gitea.smagic.top/api/v1 # API URL of your Gitea instance
+  base_url: https://gitea.smagic.top # Root URL of your Gitea instance
+  auth_endpoint: https://gitea.smagic.top/login/oauth/authorize
+  # optional, defaults to master
+  branch: main
+# This line should *not* be indented
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
