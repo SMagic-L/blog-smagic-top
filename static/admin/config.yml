@@ -1,16 +1,16 @@
 backend:
-  name: gitea
-  repo: SMagic/blog # Path to your Gitea repository
-  app_id: e623c862-2207-4b5d-8723-e46438b5f762 # The Client ID provided by Gitea
-  api_root: https://gitea.smagic.top/api/v1 # API URL of your Gitea instance
-  base_url: https://gitea.smagic.top # Root URL of your Gitea instance
-  auth_endpoint: https://gitea.smagic.top/login/oauth/authorize
+  name: github
+  repo: SMagic-L/blog-smagic-top # Path to your Gitea repository
   # optional, defaults to master
   branch: main
+  use_graphql: true
+  squash_merges: true
 # This line should *not* be indented
 
 media_folder: static/img
 public_folder: /img
+publish_mode: editorial_workflow
+
 
 collections:
   - name: 'blog'
