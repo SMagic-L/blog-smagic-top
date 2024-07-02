@@ -1,17 +1,17 @@
 module.exports = {
   siteMetadata: {
-        title: `SMagic's Blog`,
-        description: `一个兴趣广泛的软件开发者`,
-        author: `SMagic`,
-        siteUrl: `https://blog.smagic.top/`,
-        social: {
-            twitter: ``,
-            facebook: ``,
-            github: `SMagic-L`,
-            linkedin: ``,
-            email: `tmp@smagic.top`,
-        },
+    title: `SMagic's Blog`,
+    description: `一个兴趣广泛的软件开发者`,
+    author: `SMagic`,
+    siteUrl: `https://blog.smagic.top/`,
+    social: {
+      twitter: ``,
+      facebook: ``,
+      github: `SMagic-L`,
+      linkedin: ``,
+      email: `tmp@smagic.top`,
     },
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
