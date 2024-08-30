@@ -29,17 +29,11 @@ jobs:
       run: npm run build
 
     # Deploy to GitHub Pages branch
-    - name: Deploy to GitHub Pages
+    - name: Deploy to gh-pages branch
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        # Ensure you are in the right directory
-        cd public
-        # Initialize a new git repository
-        git init
-        # Configure git
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        # Add all files and commit
-        git add .
-        git commit -m "Deploy Gatsby site"
-        # Push to the pages branch
-        git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" master:pages
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        npx gh-pages-clean
+        npx gh-pages -d public -m "Deploy Gatsby site from ${GITHUB_REF}" -t true
