@@ -80,6 +80,6 @@ module.exports = {
     },
     // `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-decap-cms`
+    // `gatsby-plugin-decap-cms`
   ],
 }
