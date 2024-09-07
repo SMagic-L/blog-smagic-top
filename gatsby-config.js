@@ -9,7 +9,7 @@ module.exports = {
       facebook: ``,
       github: `SMagic-L`,
       linkedin: ``,
-      email: `tmp@smagic.top`,
+      email: `i@mail.smagic.top`,
     },
   },
   plugins: [
@@ -79,7 +79,6 @@ module.exports = {
       },
     },
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-decap-cms`
   ],
