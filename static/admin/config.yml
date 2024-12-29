@@ -5,6 +5,7 @@ backend:
   branch: main
   use_graphql: true
   squash_merges: true
+  base_url: 'https://smagic-l.github.io/blog-smagic-top'
 # This line should *not* be indented
 
 media_folder: static/img
