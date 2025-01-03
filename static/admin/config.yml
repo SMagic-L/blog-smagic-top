@@ -5,8 +5,10 @@ backend:
   branch: main
   use_graphql: true
   squash_merges: true
-  site_url: 'https://smagic-l.github.io/blog-smagic-top'
+  base_url: 'https://api.netlify.com'
+  auth_endpoint: 'auth'
   display_url: 'https://smagic-l.github.io/blog-smagic-top'
+  cms_label_prefix: 'decap-cms/'
 # This line should *not* be indented
 
 media_folder: static/img
