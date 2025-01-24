@@ -1,6 +1,6 @@
 ---
 title: JWE：另一种 JWT 的实现
-date: 2020-04-03 12:43:00 +0800
+date: 2025-01-24 11:03:00 +0800
 tags: 
 - JWT
 img: ./jwe.png
