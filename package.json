@@ -24,7 +24,6 @@
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.0",
     "graphql": "^16.10.0",
-    "graphql-iso-date": "^3.6.1",
     "katex": "^0.13.3",
     "lodash": "^4.17.21",
     "node-sass": "^9.0.0",
