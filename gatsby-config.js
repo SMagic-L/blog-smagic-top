@@ -78,7 +78,7 @@ module.exports = {
         icon: `./static/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
     // `gatsby-plugin-decap-cms`
   ],
