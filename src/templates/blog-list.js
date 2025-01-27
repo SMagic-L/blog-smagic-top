@@ -9,7 +9,7 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+    const posts = data.allMarkdownRemark.edges.filter(post => post.node.frontmatter.draft !== true)
     const { currentPage, numPages } = this.props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
@@ -118,6 +118,7 @@ export const pageQuery = graphql`
                 )
               }
             }
+            draft
           }
         }
       }
