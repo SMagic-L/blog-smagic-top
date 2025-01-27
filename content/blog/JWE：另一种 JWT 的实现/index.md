@@ -3,6 +3,7 @@ title: JWE：另一种 JWT 的实现
 date: 2025-01-24 11:03:00 +0800
 tags: 
 - JWT
+- security
 img: ./jwe.png
 draft: false
 ---

@@ -11,7 +11,11 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1000) {
+        allMarkdownRemark(
+          sort: {frontmatter: {date: DESC}}
+          limit: 1000
+          filter: {frontmatter: {draft: {eq: false}}}
+        ) {
           edges {
             node {
               fields {
@@ -25,7 +29,6 @@ exports.createPages = ({ graphql, actions }) => {
                     gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
                   }
                 }
-                draft
               }
             }
           }
@@ -38,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges.filter(post => post.node.frontmatter.draft !== true)
+    const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node

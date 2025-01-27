@@ -9,7 +9,7 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges.filter(post => post.node.frontmatter.draft !== true)
+    const posts = data.allMarkdownRemark.edges
     const { currentPage, numPages } = this.props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
@@ -98,7 +98,12 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: $limit, skip: $skip) {
+    allMarkdownRemark(
+      sort: {frontmatter: {date: DESC}}
+      limit: $limit
+      skip: $skip
+      filter: {frontmatter: {draft: {eq: false}}}
+    ) {
       edges {
         node {
           excerpt
@@ -118,7 +123,6 @@ export const pageQuery = graphql`
                 )
               }
             }
-            draft
           }
         }
       }
